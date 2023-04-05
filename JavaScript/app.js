@@ -28,11 +28,13 @@ if (showWelcoming === true) {
 alert ("Hello " + nickName +" "+userName +"\nWelcome to my To-Do List!");
 }
 
+let arrayOfAnswers = [];
+
 const yesOrNoQuestions = (qustion) => {
     let answer = prompt (qustion);
     return answer;
 }
-let arrayOfAnswers = [];
+
 const pushTheAnswers = (answer) => {
     arrayOfAnswers.push(answer);
 
