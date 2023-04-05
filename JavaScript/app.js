@@ -28,7 +28,40 @@ if (showWelcoming === true) {
 alert ("Hello " + nickName +" "+userName +"\nWelcome to my To-Do List!");
 }
 
+const yesOrNoQuestions = (qustion) => {
+    let answer = confirm (qustion);
+    return answer;
+}
+let arrayOfAnswers = [];
+const pushTheAnswers = (answer) => {
+    arrayOfAnswers.push(answer);
 
+}
+const validationOfAnswers = () => {
+    let validationArray = [];
+    for (let i = 0; i < arrayOfAnswers.length ; i++){
+        if (arrayOfAnswers[i] =="yes"){
+            validationArray.push("Yes");
+        }
+        else if (arrayOfAnswers[i] =="no"){
+            validationArray.push("No");
+        }
+        else if (arrayOfAnswers [i] =="")
+        validationArray.push("invalid");
+    }
+    return validationArray;
+
+}
+
+let userAnswer = "";
+userAnswer = yesOrNoQuestions("Do you have a job?");
+pushTheAnswers (userAnswer);
+userAnswer = yesOrNoQuestions("Do you manage pressure well?");
+pushTheAnswers (userAnswer);
+userAnswer = yesOrNoQuestions("Do you manage conflict well?");
+pushTheAnswers (userAnswer);
+
+console.log (validationOfAnswers);
 
 
 
