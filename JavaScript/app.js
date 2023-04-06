@@ -47,7 +47,7 @@ userAnswer = yesOrNoQuestions("Do you manage pressure well?");
 pushTheAnswers (userAnswer);
 userAnswer = yesOrNoQuestions("Do you manage conflict well?");
 pushTheAnswers (userAnswer);
-//console.log(arrayOfAnswers);
+console.log(arrayOfAnswers);
 
 const validationOfAnswers = (answers) => {
     let validationArray = [];
@@ -68,7 +68,13 @@ const validationOfAnswers = (answers) => {
 
 }
 
-console.log (validationOfAnswers(arrayOfAnswers));
+const consoleLogValidationOfAnswers = (validationAnswers) => {
+for (let i = 0 ; i < validationAnswers.length; i++){
+    console.log (validationAnswers[i]);
+}
+}
+
+consoleLogValidationOfAnswers(validationOfAnswers(arrayOfAnswers));
 
 
 
